@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/84d289294d.js" crossorigin="anonymous"></script>
+    <title>To do list</title>
+</head>
+<body>
+    <header>
+        <h1>To do List</h1>
+        <span>To move a task between boxes, you must drag it.</span>
+    </header>
+    <main class="todolistcontainer">
+        <section class="todo">
+            <div class="h2container">
+                <h2>To do</h2>
+            </div>
+           
+            <div class="taskscontainer">
+                <div class="addnewtask">
+                    <h3>Add a new task</h3>
+                    <i id="addnewtask" class="fa-solid fa-plus"></i>
+                </div>
+            </div>
+        </section>
+        <section class="inprogress">
+            <div class="h2container">
+                <h2>In progress</h2>
+            </div>
+            <div class="taskscontainer">
+                
+            </div>
+        </section>
+        <section class="completed">
+            <div class="h2container">
+                <h2>Completed</h2>
+            </div>
+            <div class="taskscontainer">
+                
+            </div>
+        </section>
+    </main>
+
+    <section id="sectionmodal" class="sectionmodalnovisible"> 
+        <div id="modal" class="modalnovisible">
+            <h2>New task</h2>
+            <div>   
+                <textarea placeholder="Title" required class="modal__title modal__item"></textarea>
+                <textarea placeholder="Description" required class="modal__description modal__item"></textarea>
+                <span>Deadline</span>
+                <input placeholder="Date" type="date" required class="modal__date modal__item"></textarea>
+                <div>
+                    <input type="submit" value="Add task" class="addtask modal__item">
+                    <input type="submit" value="Cancel" class="cancel modal__item">
+                </div>
+                <span class="hidden" id="warning">You must fill out all fields to proceed.</span>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
